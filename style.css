@@ -88,6 +88,15 @@ footer p{
     text-align: center;
 }
 
+li:first-of-type{
+    position:absolute;
+    top: 2%;
+    left: 0;
+    right: 0;
+    width:fit-content;
+    margin:0 auto;
+    padding: 1rem;
+}
 
 .scroll, article{
     display: grid;
@@ -215,6 +224,8 @@ ul{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
     text-align: center;
+    padding-top: 4rem;
+    padding-right: 4rem;
 }
 
 
@@ -324,14 +335,24 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     ul {
         overflow: visible;
         position: absolute;
-        top: 0;
-        padding-left: 1rem;
+        top: -100%;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        margin: 10px;
-        gap: 5rem;
         text-align: center;
+        margin-top: 0;
+        max-width: 1080px;
+        width: 100%;
+
     }
+
+    li:first-of-type{
+        position: initial;
+    }
+    
+    nav{
+        line-height: 1;
+    }
+
     label span, input {
         display: none;
     }
